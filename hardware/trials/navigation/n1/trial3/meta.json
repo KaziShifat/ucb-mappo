@@ -1,0 +1,10 @@
+{
+  "task": "navigation",
+  "robots": 1,
+  "trial": 3,
+  "algorithm": "ucb_ppo",
+  "steps": 200,
+  "duration_s": 100,
+  "model_dir": "hardware/models/navigation_n1",
+  "video": "TODO"
+}

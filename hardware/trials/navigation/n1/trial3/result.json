@@ -1,0 +1,9 @@
+{
+  "success": false,
+  "robots": {
+    "robot1": {
+      "reached_goal": false,
+      "final_distance_m": 4.667
+    }
+  }
+}

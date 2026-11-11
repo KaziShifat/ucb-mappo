@@ -1,0 +1,17 @@
+{
+  "success": false,
+  "robots": {
+    "robot1": {
+      "reached_goal": true,
+      "final_distance_m": 0.006
+    },
+    "robot2": {
+      "reached_goal": true,
+      "final_distance_m": 0.014
+    },
+    "robot3": {
+      "reached_goal": false,
+      "final_distance_m": 3.976
+    }
+  }
+}

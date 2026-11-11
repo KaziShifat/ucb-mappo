@@ -1,0 +1,10 @@
+{
+  "task": "coverage",
+  "robots": 2,
+  "trial": 5,
+  "algorithm": "ucb_mappo",
+  "steps": 200,
+  "duration_s": 100,
+  "model_dir": "hardware/models/coverage_n2",
+  "video": "TODO"
+}
