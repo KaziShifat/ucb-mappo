@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+pyyaml
+torch
+onnx
+onnxruntime
+pytest
