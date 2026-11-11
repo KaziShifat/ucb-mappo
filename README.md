@@ -3,6 +3,17 @@
 Code, logs and analysis scripts for the UCB-MAPPO paper: MAPPO with Monte Carlo dropout uncertainty
 as an exploration bonus, for multi-robot navigation and area coverage with one to four TurtleBot4 robots.
 
+<p align="center">
+  <img src="docs/images/overview.png" width="85%" alt="UCB-MAPPO overview">
+</p>
+
+## Environments
+
+<p align="center">
+  <img src="docs/images/sim_setup.png" width="45%" alt="Simulation setup in Gazebo: (a) maze, (b) warehouse, (c) TurtleBot4 model">
+</p>
+<p align="center"><em>(a) 18 m x 18 m maze. (b) 20 m x 20 m warehouse with 15 shelves. (c) Simulated TurtleBot4.</em></p>
+
 ## Layout
 
     src/tb4_multi_nav/   ROS 2 package: Gazebo worlds, robot models, launch files, envs, agents, train.py
@@ -13,6 +24,7 @@ as an exploration bonus, for multi-robot navigation and area coverage with one t
     videos/              list of trial videos
     tools/               world and robot model generator
     tests/               pytest suite
+    docs/images/         figures used in this README
 
 PPO and UCB-PPO are used with one robot, MAPPO and UCB-MAPPO with two to four.
 16 configurations x 2 versions x 3 seeds = 96 runs.
@@ -34,6 +46,15 @@ Percent changes are computed before rounding. Table 6 is computed from the round
 Needs `PYTHONPATH=src/tb4_multi_nav`. The default backend is a fast kinematic simulator.
 The Gazebo backend (`gazebo_backend.py`) needs ROS 2 and was not run.
 
+## Hardware
+
+<p align="center">
+  <img src="docs/images/lab.png" width="90%" alt="T-shaped lab used for the physical experiments, with the four TurtleBot4 robots">
+</p>
+
+The trained actors are exported to ONNX and run on the Raspberry Pi 4 of each TurtleBot4.
+Trial recordings are in `hardware/trials/`, and the video list is in `videos/README.md`.
+
 ## Status
 
 Tested: environments, agents, training CLI, world generation, analysis scripts (33 tests).
@@ -47,4 +68,4 @@ invented maze and shelf coordinates, and the hardware floor plan used to compute
 
 ## Citation and license
 
-See `CITATION.cff` (fill in names and DOI) and `LICENSE` (MIT, fill in your name).
+See `CITATION.cff` and `LICENSE` (MIT).
