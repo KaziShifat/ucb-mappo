@@ -1,0 +1,41 @@
+# UCB-PPO, one robot. Actor dropout, 50 MC passes, UCB bonus.
+# Values follow Table 2 of the paper (learning rate, gamma, lambda, clip, epochs, batch,
+# entropy coefficient, hidden layers, episodes, max steps, N_mc, dropout, beta_0, beta final).
+# The last two PPO lines (reward_scale, forward_bias) are NOT in Table 2: they were added by
+# this reference code. Set reward_scale: 1.0 and forward_bias: 0.0 to remove their effect.
+# Reward terms are Table 1. Run: python -m tb4_multi_nav.train --task ... --algo ucb_ppo ...
+env:
+  backend: kinematic
+  max_steps: 200
+  control_dt: 0.5
+  sim_dt: 0.1
+  lidar_range: 12.0
+  start_jitter: 0.3
+  reward:
+    navigation:
+      goal: 100.0
+      progress: 2.0
+      collision: -50.0
+      time: -0.1
+    coverage:
+      success: 10.0
+      new_cell: 5.0
+      revisit: -2.0
+      collision: -50.0
+      time: -0.1
+ppo:
+  lr: 0.0003
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_eps: 0.2
+  epochs: 10
+  batch_size: 64
+  hidden: 256
+  entropy_coef: 0.01
+  episodes: 400
+  reward_scale: 0.05
+  forward_bias: 0.5
+  dropout_p: 0.1
+  n_mc: 50
+  beta0: 1.0
+  beta_final_ratio: 0.05

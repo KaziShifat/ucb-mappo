@@ -1,0 +1,5 @@
+robots,algorithm,successes,trials,rate,ci_low,ci_high
+1,UCB-PPO,2,3,0.667,0.208,0.939
+2,UCB-MAPPO,2,3,0.667,0.208,0.939
+3,UCB-MAPPO,0,3,0.0,0.0,0.562
+4,UCB-MAPPO,0,3,0.0,0.0,0.562

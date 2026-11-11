@@ -1,0 +1,17 @@
+metric,env,robots,baseline,ucb,change_pct
+Success,maze,1,0.44,0.42,-4.545454545454552
+Success,maze,2,0.37,0.39,5.405405405405417
+Success,maze,3,0.433,0.367,-15.384629467455824
+Success,maze,4,0.365,0.35,-4.109589041095873
+Success,warehouse,1,0.66,0.7,6.060606060606055
+Success,warehouse,2,0.62,0.57,-8.064516129032262
+Success,warehouse,3,0.607,0.547,-9.890104069557005
+Success,warehouse,4,0.525,0.515,-1.904761904761909
+Collision,maze,1,0.0,0.0,
+Collision,maze,2,0.017,0.018,8.599998740001723
+Collision,maze,3,0.054,0.045,-17.100000008549422
+Collision,maze,4,0.093,0.074,-20.400000186960565
+Collision,warehouse,1,0.0,0.0,
+Collision,warehouse,2,0.012,0.014,15.700006817617563
+Collision,warehouse,3,0.034,0.043,26.199999951340303
+Collision,warehouse,4,0.086,0.08,-6.599999966356895
